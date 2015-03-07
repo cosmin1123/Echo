@@ -4,10 +4,12 @@ import java.net.Socket;
  * Created by Vlad on 3/7/2015.
  */
 public class ConnectedUser {
-    Socket socket;
+    Socket dataSocket;
+    Socket incomingSocket;
     String deviceIdentifier;
-    public ConnectedUser (Socket socket, String deviceIdentifier){
-        this.socket = socket;
+    public ConnectedUser (Socket dataSocket, Socket incomingSocket, String deviceIdentifier){
+        this.dataSocket = dataSocket;
+        this.incomingSocket = incomingSocket;
         this.deviceIdentifier = deviceIdentifier;
     }
 }

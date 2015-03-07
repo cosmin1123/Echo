@@ -6,6 +6,22 @@ import java.util.LinkedList;
 
 public class Database {
 
+    private static Database instance = null;
+    private static Object mutex= new Object();
+
+    private Database(){}
+
+    public static Database getInstance(){
+        if(instance == null){
+            synchronized (mutex){
+                if(instance == null){
+                    instance = new Database();
+                }
+            }
+        }
+        return instance;
+    }
+
     LinkedList<Message> questions = new LinkedList<Message>();
     LinkedList<Message> answers = new LinkedList<Message>();
     LinkedList<ConnectedUser> connectedUsers = new LinkedList<ConnectedUser>();

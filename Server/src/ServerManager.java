@@ -9,13 +9,10 @@ import java.net.*;
 
 public class ServerManager {
 
-    Database database;
 
-    public ServerManager(){
-        database = new Database();
-    }
+    public ServerManager() {}
 
     public void run(){
-
+        (new ListenThread()).run();
     }
 }
