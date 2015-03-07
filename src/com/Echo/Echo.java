@@ -2,6 +2,7 @@ package com.Echo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.Echo.R;
 
 public class Echo extends Activity {
     /**
