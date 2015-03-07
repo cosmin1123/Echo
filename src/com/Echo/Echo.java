@@ -5,6 +5,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import com.Echo.R;
@@ -19,11 +20,12 @@ public class Echo extends Activity {
         setContentView(R.layout.main);
 
         WebView webView = (WebView) findViewById(R.id.webview);
-        webView.loadUrl("file:///android_asset/web/index.html");
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setDomStorageEnabled(true);
+        webView.getSettings().setLoadsImagesAutomatically(true);
 
-//        WebSettings sett = webView.getSettings();
-//        sett.setAllowUniversalAccessFromFileURLs(true);
-//        sett.setAllowFileAccessFromFileURLs(true);
+        webView.loadUrl("file:///android_asset/web/index.html");
 
 
         PackageManager m = getPackageManager();
