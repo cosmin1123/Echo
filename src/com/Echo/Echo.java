@@ -26,6 +26,9 @@ public class Echo extends Activity {
                         Answer.class);
 
                 startActivity(i);
+                overridePendingTransition(R.anim.animation_enter,
+                        R.anim.animation_leave);
+
             }
         });
 
@@ -36,6 +39,7 @@ public class Echo extends Activity {
                         Answer.class);
 
                 startActivity(i);
+                overridePendingTransition( android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
     }
@@ -56,7 +60,5 @@ public class Echo extends Activity {
 
         setFont();
         setButtonListener();
-
-
     }
 }
