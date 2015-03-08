@@ -12,9 +12,9 @@
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/ask_button"
+                android:background="@drawable/lue_energy"
                 android:text="Ask"
-                android:textColor="#FF00FF"
+                android:textColor="#ff000000"
                 android:textSize="100dp"
                 android:id="@+id/askButton" android:layout_marginBottom="-10dp"/>
     </LinearLayout>
@@ -25,9 +25,9 @@
         <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/ask_button"
+                android:background="@drawable/red"
                 android:text="Answer"
-                android:textColor="#FF00FF"
+                android:textColor="#ff000000"
                 android:textSize="100dp"
                 android:id="@+id/answerButton" android:layout_marginTop="-10dp"/>
     </LinearLayout>

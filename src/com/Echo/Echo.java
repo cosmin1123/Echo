@@ -15,6 +15,17 @@ public class Echo extends Activity {
      * Called when the activity is first created.
      */
 
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        setFont();
+        setButtonListener();
+    }
+
     public void setButtonListener() {
         Button butt1 = (Button) findViewById(R.id.answerButton);
         Button butt2 = (Button) findViewById(R.id.askButton);
@@ -36,7 +47,7 @@ public class Echo extends Activity {
             public void onClick(View v) {
                 Intent i=new Intent(
                         Echo.this,
-                        Answer.class);
+                        Question.class);
 
                 startActivity(i);
                 overridePendingTransition( android.R.anim.slide_in_left, android.R.anim.slide_out_right);
@@ -51,14 +62,5 @@ public class Echo extends Activity {
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Goffik-O.ttf");
         butt1.setTypeface(font);
         butt2.setTypeface(font);
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-
-        setFont();
-        setButtonListener();
     }
 }

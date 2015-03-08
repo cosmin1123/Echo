@@ -1,7 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/llTop"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
               android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:focusable="true" android:focusableInTouchMode="true" android:background="@drawable/back_oranje">
+
+    <AbsoluteLayout
+            android:id="@+id/alTop"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight=".50"
+            >
+
+        <EditText
+                android:layout_width="282dp"
+                android:layout_height="183dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/ivImage1" android:layout_x="35dp" android:layout_y="42dp"
+                android:nextFocusUp="@id/ivImage1" android:nextFocusLeft="@id/ivImage1" android:editable="false"
+                android:gravity="center"
+                android:background="@drawable/edit_text_style" android:textColor="#ffff"
+                android:text="I&apos;m thinking about purchasing a dog. Got any advice? Was thinking about husky"/>
+
+    </AbsoluteLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".50" >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+            <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:src="@drawable/cloud_org"
+                    android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignBottom="@+id/image" android:layout_margin="70dp"
+                    android:text="I&apos;m a proud owner of a husky and requires an enormous amount of attention."/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
